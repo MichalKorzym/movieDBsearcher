@@ -1,0 +1,54 @@
+<header>
+    <div class="welcome">
+        <h1 class="welcome-text">Best movie searcher {{ title}}<fa-icon [icon]="faVideo"></fa-icon>
+        </h1>
+        <h2 class="from-hidden">If u want to find your favourite movie just put its name</h2>
+
+
+    </div>
+    <button class="btn-header">Find your favourite movie!</button>
+    <img src="/assets/images/video.jpg" alt="foto">
+</header>
+<nav>
+    <div class="hamburgerMenu-bars" [class.barsClickHandler]="isClicked" (click)="handleMenuEvent()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="hamburgerMenu-xmark" [class.xmarkClickHandler]="isClicked" (click)="handleMenuEvent()">
+        <i class=" fa fa-times"></i>
+    </div>
+    <ul class="menu-container" [class.showed]="isClicked">
+        <li><a href="#">Films</a></li>
+        <li><a href="#">Series</a></li>
+        <li><a href="#">Rankings</a></li>
+        <li><a href="#">About us</a></li>
+    </ul>
+</nav>
+<section class="movieSearcher">
+    <div class="searching">
+        <form action="">
+            <input type="text" [placeholder]="name" name="first" [(ngModel)]="nameFilm">
+            <button class="searchingBtn" (click)="handleInputMovie()">Search movie <i
+                    class="fas fa-search"></i></button>
+        </form>
+
+    </div>
+</section>
+<section class="example-movies">
+
+    <div class="film-image">
+        <img src="/assets/images/spiderman.jpg" alt="">
+        <p>Spiderman</p>
+    </div>
+    <div class="film-image">
+        <img src="/assets/images/dumbledore.jpg" alt="">
+        <p>Sekrety Dumbledore</p>
+    </div>
+    <div class="film-image">
+        <img src="/assets/images/batman.jpg" alt="">
+        <p>Batman</p>
+    </div>
+
+
+</section>
+
+<footer>&copy; Michal Korzym</footer>
