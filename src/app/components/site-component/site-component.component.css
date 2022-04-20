@@ -1,190 +1,9 @@
-/* wlasciwosci header */
-header {
-
-    position: relative;
-    background-color: #A1764F;
-    height: 100vh;
-    overflow: hidden;
-    max-width: 1920px;
-
-}
-
-header>* {
-    position: absolute;
-}
-
-header img {
-    background-position: cover;
-    opacity: 60%;
-    transition: 2s;
-}
-
-header img:hover {
-    transform: scale(1.5);
-}
-
-.welcome-text {
-    font-size: 50px;
-    padding: 10px 0;
-}
-
-.welcome {
-    /* height: 100%; */
-    text-align: center;
-    /* width: 100vw; */
-    top: 10vh;
-    left: 5vw;
-    color: white;
-    z-index: 1;
-
-}
-
-.btn-header {
-    bottom: 10vh;
-    left: 5vw;
-    font-family: 'Saira', sans-serif;
-    color: white;
-    background-color: transparent;
-    text-transform: uppercase;
-    padding: 20px 20px;
-    font-size: 15px;
-    border: 2px solid white;
-    z-index: 1;
-    transition: 0.5s;
-
-}
-
-.btn-header:hover {
-    cursor: pointer;
-    /* color: black; */
-    background-color: #C79261;
-}
-
-
-.from-hidden {
-    animation: showing 4s infinite;
-    font-size: 30px;
-}
-
-
-/* //menu */
-
-.hamburgerMenu-bars {
-    color: white;
-    position: fixed;
-    font-size: 40px;
-    top: 10px;
-    right: 10px;
-    transition: .3s;
-
-}
-
-.hamburgerMenu-xmark {
-    color: white;
-    display: none;
-    position: fixed;
-    font-size: 40px;
-    top: 10px;
-    right: 10px;
-    transition: .3s;
-
-}
-
-.hamburgerMenu-bars:hover,
-.hamburgerMenu-xmark:hover {
-    cursor: pointer;
-    color: #8b7864;
-}
-
-
-
-.menu-container {
-    width: 20vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: -20vw;
-    transition: 0.5s;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    /* justify-content: center; */
-    text-align: center;
-
-
-}
-
-.menu-container li {
-    padding: 10px 5px;
-    width: 100%;
-    height: 10%;
-
-}
-
-.menu-container li a {
-    color: white;
-    text-decoration: none;
-    font-family: monospace, sans-serif;
-    font-size: 30px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-container li a:hover {
-    color: orange;
-}
-
-.showed {
-    right: 0;
-    /* background-color: #EDAF74; */
-    background-image: linear-gradient(to top, transparent, #886341);
-    opacity: 80%;
-}
-
-.barsClickHandler {
-    display: none;
-    z-index: 1;
-}
-
-.xmarkClickHandler {
-    display: inline-block;
-    z-index: 1;
-}
-
-/* 
-wyszukiwarka */
-.movieSearcher {
-    padding: 0 5px 0 0;
-}
-
 .searching {
     height: 10vh;
-    width: 100vw;
     background-color: #C79369;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
-}
-
-.searchingBtn {
-    font-family: arial;
-    font-size: 15px;
-    padding: 5px 10px;
-    background-color: black;
-    border: 3px solid rgb(227, 102, 57);
-    color: white;
-    border-radius: 15px;
-    transition: .3s;
-}
-
-.searchingBtn:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-    border-color: white;
+    font-family: sans-serif;
 }
 
 input {
@@ -192,72 +11,61 @@ input {
     padding: 5px 5px;
 }
 
-/* examples */
-.example-movies {
-    /* text-align: center; */
-    height: 50vh;
+
+.finded-movies {
     background-image: url(/assets/images/marvel.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     display: flex;
+    position: relative;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    /* max-width: 1600px;
-    margin: 50px auto 0;
-    padding: 5%;
-    text-align: center; */
+    z-index: -1;
+
 
 
 }
 
-.example-movies p {
+app-load-spinner {
+    position: absolute;
+    top: 50;
+    left: 50;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-label {
+
+    padding: 7px;
+    transition: 1s;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px black solid;
+}
+
+
+input[type=checkbox]:checked+label {
+    color: white;
+    font-style: normal;
+    background-color: orangered;
+
+}
+
+.finded-movies p {
     color: white;
     text-align: center;
     font-family: sans-serif;
 }
 
-/* footer */
-footer {
-    background-color: #C79261;
+.finded-movies h2 {
     color: white;
-    font-family: saira, sans-serif;
-    text-align: center;
-    padding: 20px;
-    font-size: 20px;
 }
 
-@keyframes showing {
-    0% {
-        opacity: 0;
-    }
+.movie-image {
+    padding: 20px;
+}
 
-    12.5% {
-        opacity: 33;
-    }
-
-    25% {
-        opacity: 66;
-    }
-
-    37.5% {
-        opacity: 100;
-    }
-
-    50% {
-        opacity: 66;
-    }
-
-    62.5% {
-        opacity: 33;
-    }
-
-    75% {
-        opacity: 16;
-    }
-
-    100% {
-        opacity: 0;
-    }
-
+.empty {
+    height: 30vh;
 }

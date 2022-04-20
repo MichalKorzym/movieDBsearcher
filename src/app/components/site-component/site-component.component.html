@@ -1,54 +1,22 @@
-<header>
-    <div class="welcome">
-        <h1 class="welcome-text">Best movie searcher {{ title}}<fa-icon [icon]="faVideo"></fa-icon>
-        </h1>
-        <h2 class="from-hidden">If u want to find your favourite movie just put its name</h2>
-
-
-    </div>
-    <button class="btn-header">Find your favourite movie!</button>
-    <img src="/assets/images/video.jpg" alt="foto">
-</header>
-<nav>
-    <div class="hamburgerMenu-bars" [class.barsClickHandler]="isClicked" (click)="handleMenuEvent()">
-        <i class="fas fa-bars"></i>
-    </div>
-    <div class="hamburgerMenu-xmark" [class.xmarkClickHandler]="isClicked" (click)="handleMenuEvent()">
-        <i class=" fa fa-times"></i>
-    </div>
-    <ul class="menu-container" [class.showed]="isClicked">
-        <li><a href="#">Films</a></li>
-        <li><a href="#">Series</a></li>
-        <li><a href="#">Rankings</a></li>
-        <li><a href="#">About us</a></li>
-    </ul>
-</nav>
-<section class="movieSearcher">
+<section class="movie-searcher">
     <div class="searching">
         <form action="">
-            <input type="text" [placeholder]="name" name="first" [(ngModel)]="nameFilm">
-            <button class="searchingBtn" (click)="handleInputMovie()">Search movie <i
-                    class="fas fa-search"></i></button>
+            <input type="text" placeholder="film title..." name="first" [formControl]="search">
+            <input type="checkbox" class="check-window" (change)="langSelect($event)" id="lang" name="lang"
+                [value]="'pl'">
+            <label for="lang" class="checkbox-label">Polish language</label>
+
         </form>
 
     </div>
 </section>
-<section class="example-movies">
-
-    <div class="film-image">
-        <img src="/assets/images/spiderman.jpg" alt="">
-        <p>Spiderman</p>
-    </div>
-    <div class="film-image">
-        <img src="/assets/images/dumbledore.jpg" alt="">
-        <p>Sekrety Dumbledore</p>
-    </div>
-    <div class="film-image">
-        <img src="/assets/images/batman.jpg" alt="">
-        <p>Batman</p>
-    </div>
-
-
+<section class="finded-movies" [ngClass]="{'empty': !movies.length}">
+    <h2 *ngIf="!movies.length">Type title to display movie</h2>
+    <app-load-spinner *ngIf="movies.length && !isLoaded"></app-load-spinner>
+    <ng-container>
+        <div class="movie-image" *ngFor="let movie of movies">
+            <img src="http://image.tmdb.org/t/p/w300/{{movie.backdrop_path}}" alt="">
+            <p>{{movie.original_title}}</p>
+        </div>
+    </ng-container>
 </section>
-
-<footer>&copy; Michal Korzym</footer>

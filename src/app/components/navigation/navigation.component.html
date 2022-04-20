@@ -1,0 +1,14 @@
+<nav>
+    <div class="hamburgerMenu-bars" [class.barsClick-handler]="isClicked" (click)="handleMenuEvent()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="hamburgerMenu-xmark" [class.xmarkClick-handler]="isClicked" (click)="handleMenuEvent()">
+        <i class=" fa fa-times"></i>
+    </div>
+    <ul class="menu-container" [class.showed]="isClicked">
+        <li><a href="#">Films</a></li>
+        <li><a href="#">Series</a></li>
+        <li><a href="#">Rankings</a></li>
+        <li><a href="#">About us</a></li>
+    </ul>
+</nav>
