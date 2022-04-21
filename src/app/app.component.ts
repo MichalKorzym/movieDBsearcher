@@ -4,10 +4,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-   <app-header> </app-header> 
+  <app-header> </app-header> 
+  <app-body> </app-body> 
   <app-navigation> </app-navigation>
-  <app-site-component> </app-site-component> 
-  <app-example></app-example>
   <app-footer></app-footer>
     
   `,

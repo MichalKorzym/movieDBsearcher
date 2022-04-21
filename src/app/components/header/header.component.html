@@ -1,9 +1,27 @@
 <header>
-    <div class="welcome">
-        <h1 class="welcome-text">Best movie searcher FilmCOM<i class="fas fa-camera"></i>
-        </h1>
-        <h2 class="from-hidden">If u want to find your favourite movie just put its title</h2>
-    </div>
-    <button class="btn-header">Find your favourite movie!</button>
-    <img src="/assets/images/video.jpg" alt="foto">
+    <section class="movie-searcher">
+        <div class="searching">
+            <form action="">
+                <div class="search">
+                    <input type="text" placeholder="film title...  " name="first" [formControl]="search"
+                        class="search-field">
+                    <i class="fa fa-search"></i></div>
+                <div class="checking-lang">
+                    <input type="checkbox" class="check-window" (change)="langSelect($event)" id="lang" name="lang"
+                        [value]="'pl'">
+                    <label for="lang" class="checkbox-label">polish language</label>
+                </div>
+            </form>
+
+        </div>
+    </section>
+    <section class="finded-movies" [ngClass]="{'empty': !movies.length}">
+        <app-load-spinner *ngIf="movies.length && !isLoaded"></app-load-spinner>
+        <ng-container>
+            <div class="movie-image" *ngFor="let movie of movies">
+                <img src="http://image.tmdb.org/t/p/w300/{{movie.backdrop_path}}" alt="">
+                <p>{{movie.original_title}}</p>
+            </div>
+        </ng-container>
+    </section>
 </header>

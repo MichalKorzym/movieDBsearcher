@@ -4,5 +4,6 @@ footer {
     font-family: saira, sans-serif;
     text-align: center;
     padding: 20px;
-    font-size: 20px;
+    font-size: 1vw;
+    height: 10vh;
 }

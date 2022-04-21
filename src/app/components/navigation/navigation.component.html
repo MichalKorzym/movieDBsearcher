@@ -1,8 +1,8 @@
 <nav>
-    <div class="hamburgerMenu-bars" [class.barsClick-handler]="isClicked" (click)="handleMenuEvent()">
+    <div class="hamburgerMenu-bars icon" [class.barsClick-handler]="isClicked" (click)="handleMenuEvent()">
         <i class="fas fa-bars"></i>
     </div>
-    <div class="hamburgerMenu-xmark" [class.xmarkClick-handler]="isClicked" (click)="handleMenuEvent()">
+    <div class="hamburgerMenu-xmark icon" [class.xmarkClick-handler]="isClicked" (click)="handleMenuEvent()">
         <i class=" fa fa-times"></i>
     </div>
     <ul class="menu-container" [class.showed]="isClicked">

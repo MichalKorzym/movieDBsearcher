@@ -4,4 +4,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(/assets/images/video.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
 }

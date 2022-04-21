@@ -1,0 +1,86 @@
+section {
+    position: relative;
+    height: 45vh;
+    overflow: hidden;
+    max-width: 1920px;
+}
+
+section>* {
+    position: absolute;
+}
+
+.welcome-text {
+    font-size: 3vw;
+    padding: 10px 0;
+}
+
+.welcome {
+    text-align: center;
+    bottom: 10%;
+    left: 5%;
+    color: white;
+    z-index: 1;
+
+}
+
+.btn-header {
+    bottom: 40%;
+    left: 5%;
+    font-family: 'Saira', sans-serif;
+    color: white;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 2vh 2vw;
+    font-size: 1vw;
+    border: 2px solid white;
+    z-index: 1;
+    transition: 0.5s;
+
+
+}
+
+.btn-header:hover {
+    cursor: pointer;
+    background-color: #C79261;
+}
+
+.from-hidden {
+    animation: showing 4s infinite;
+    font-size: 2vw;
+}
+
+
+@keyframes showing {
+    0% {
+        opacity: 0;
+    }
+
+    12.5% {
+        opacity: 33;
+    }
+
+    25% {
+        opacity: 66;
+    }
+
+    37.5% {
+        opacity: 100;
+    }
+
+    50% {
+        opacity: 66;
+    }
+
+    62.5% {
+        opacity: 33;
+    }
+
+    75% {
+        opacity: 16;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
