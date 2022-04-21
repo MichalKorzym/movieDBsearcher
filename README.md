@@ -6,8 +6,8 @@
 
 Działanie aplikacji, po krótce:
 
-Korzystajac z ngFormsow nasłuchuje zmian na inpucie po czasie 100ms od skończenia wykonywania akcji wysyłany jest request z query, pobrana wartość z inputa służy do otrzymania wyników poprzez zapytanie GET do API. Ponadto dodałem funkcje filtrowania otrzymanych filmów pod względem języka. Zaznaczając opcje polish language otrzymamy wyłącznie filmy z językiem polskim, po odznaczeniu powracają pierwotnie znalezione filmy. 
+Korzystajac z ngFormsow nasłuchuje zmian na inpucie, po czasie 100ms od zakończenia wykonywania akcji wysyłany jest request z query, pobrana wartość z inputa służy do otrzymania wyników poprzez zapytanie GET do API. Ponadto dodałem funkcje filtrowania otrzymanych filmów pod względem języka. Zaznaczając opcje polish language otrzymamy wyłącznie filmy z językiem polskim, po odznaczeniu powracają pierwotnie znalezione filmy. 
 Podczas gdy łącze będzie słabe powinien pojawić się load-spinner, który informuje użytkownika, że akcje są wykonywane.
 
 Dodatkowo dodałem proste menu mające na celu poprawić wygląd projektu oraz przycisk, który przenosi nas na górę strony.
-Całość jest "w miarę" responsywna, zamiast korzystać z media queries postanowiłem skorzystać z odwoływania się do  viewport-height oraz viewport-width.
+Całość jest "w miarę" responsywna, zamiast korzystać z media queries postanowiłem skorzystać z odwoływania się do  viewport-height oraz viewport-width aby zachować odpowiednie skalowanie obiektów.
